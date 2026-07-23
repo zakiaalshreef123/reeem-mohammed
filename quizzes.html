@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاختبارات - منصة تعلم الإنجليزية</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav>
+            <div class="logo">📚 English Platform</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="lessons.html">الدروس</a></li>
+                <li><a href="quizzes.html" class="active">الاختبارات</a></li>
+                <li><a href="#about">عن المنصة</a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-login">تسجيل دخول</a>
+                    <a href="register.html" class="btn-register">إنشاء حساب</a>
+                </li>
+                <li id="userLinks" style="display:none;">
+                    <a href="dashboard.html">لوحة التحكم</a>
+                    <a href="#" id="logoutBtn" class="btn-logout">تسجيل خروج</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <!-- ===== QUIZZES CONTENT ===== -->
+    <main class="quizzes-page">
+        <section class="page-header">
+            <h1>🎯 الاختبارات</h1>
+            <p>اختبر مستواك في اللغة الإنجليزية من خلال هذه الاختبارات</p>
+        </section>
+
+        <section class="quizzes-grid" id="quizzesGrid">
+            <!-- الاختبارات ستظهر هنا عبر JavaScript -->
+        </section>
+
+        <!-- ===== QUIZ MODAL ===== -->
+        <div class="quiz-modal" id="quizModal" style="display:none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="quizTitle">اختبار</h2>
+                    <button class="modal-close" onclick="closeQuiz()">✕</button>
+                </div>
+                <div class="modal-body" id="quizBody">
+                    <!-- أسئلة الاختبار ستظهر هنا -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-submit" onclick="submitQuiz()">إرسال الإجابات</button>
+                    <button class="btn-secondary" onclick="closeQuiz()">إلغاء</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 منصة تعلم الإنجليزية - جميع الحقوق محفوظة</p>
+        <div class="footer-links">
+            <a href="#">سياسة الخصوصية</a>
+            <a href="#">الشروط والأحكام</a>
+            <a href="#">اتصل بنا</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
