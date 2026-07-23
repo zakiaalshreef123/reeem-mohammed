@@ -948,3 +948,62 @@ document.addEventListener('keydown', function(e) {
 });
 
 console.log('📚 جميع الوظائف تم تحميلها بنجاح!');
+// ===== SIDEBAR TOGGLE =====
+function setupSidebar() {
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    
+    if (toggleBtn && sidebar) {
+        toggleBtn.addEventListener('click', function() {
+            sidebar.classList.toggle('open');
+            
+            // Create overlay if not exists
+            let overlay = document.querySelector('.sidebar-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'sidebar-overlay';
+                document.body.appendChild(overlay);
+            }
+            overlay.classList.toggle('active');
+            
+            // Close sidebar when clicking overlay
+            overlay.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+        });
+        
+        // Close sidebar when clicking a link (mobile)
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 992) {
+                    sidebar.classList.remove('open');
+                    const overlay = document.querySelector('.sidebar-overlay');
+                    if (overlay) overlay.classList.remove('active');
+                }
+            });
+        });
+    }
+}
+
+// ===== LOGOUT FROM SIDEBAR =====
+function setupSidebarLogout() {
+    const logoutBtn = document.getElementById('logoutBtnSidebar');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('rememberMe');
+            showToast('👋 تم تسجيل الخروج بنجاح!', 'info');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 500);
+        });
+    }
+}
+
+// استدعاء الوظائف عند تحميل الصفحة
+// أضف هذا داخل document.addEventListener('DOMContentLoaded', function() {
+// setupSidebar();
+// setupSidebarLogout();
+// });
