@@ -5,40 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لوحة التحكم - منصة تعلم الإنجليزية</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- ===== HEADER ===== -->
-    <header>
-        <nav>
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
             <div class="logo">📚 English Platform</div>
-            <ul class="nav-links">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="dashboard.html" class="active">لوحة التحكم</a></li>
-                <li><a href="#lessons">الدروس</a></li>
-                <li><a href="#quiz">الاختبارات</a></li>
-                <li><a href="#" id="logoutBtnDashboard" class="btn-logout">🚪 تسجيل خروج</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">☰</div>
-        </nav>
-    </header>
-
-    <!-- ===== DASHBOARD CONTENT ===== -->
-    <main class="dashboard">
-        <div class="dashboard-header">
-            <h1 id="welcomeMessage">👋 مرحباً، مستخدم</h1>
-            <div class="user-badge">
-                <span class="badge" id="userLevel">متوسط</span>
-            </div>
         </div>
         
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="dashboard.html" class="active">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">لوحة التحكم</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">الرئيسية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="lessons.html">
+                        <span class="nav-icon">📖</span>
+                        <span class="nav-text">الدروس</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="quizzes.html">
+                        <span class="nav-icon">🎯</span>
+                        <span class="nav-text">الاختبارات</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-icon">🏆</span>
+                        <span class="nav-text">الإنجازات</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-icon">📅</span>
+                        <span class="nav-text">جدول التعلم</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-icon">💬</span>
+                        <span class="nav-text">المحادثات</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text">الإعدادات</span>
+                    </a>
+                </li>
+                <li class="logout-item">
+                    <a href="#" id="logoutBtnSidebar">
+                        <span class="nav-icon">🚪</span>
+                        <span class="nav-text">تسجيل خروج</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="dashboard-main">
+        <!-- Top Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+                <h1>لوحة التحكم</h1>
+            </div>
+            <div class="header-right">
+                <span class="user-name" id="userNameDisplay">👤 مستخدم</span>
+                <img src="https://ui-avatars.com/api/?name=User&background=667eea&color=fff&size=40" alt="User" class="user-avatar">
+            </div>
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-text">
+                <h2 id="welcomeMessage">👋 مرحباً، مستخدم</h2>
+                <p>استمر في التعلم وحقق أهدافك اليوم!</p>
+            </div>
+            <div class="welcome-badge">
+                <span class="badge" id="userLevel">🌟 مبتدئ</span>
+            </div>
+        </section>
+
         <!-- Stats Cards -->
-        <div class="dashboard-stats">
+        <section class="stats-grid">
             <div class="stat-card">
                 <div class="stat-icon">📚</div>
                 <div class="stat-info">
                     <span class="stat-number">12</span>
                     <span class="stat-label">دروس مكتملة</span>
+                </div>
+                <div class="stat-progress">
+                    <div class="progress-bar"><div class="progress" style="width:60%"></div></div>
                 </div>
             </div>
             <div class="stat-card">
@@ -47,12 +117,18 @@
                     <span class="stat-number">85</span>
                     <span class="stat-label">نقاط التقييم</span>
                 </div>
+                <div class="stat-progress">
+                    <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
+                </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">🏆</div>
                 <div class="stat-info">
                     <span class="stat-number">3</span>
                     <span class="stat-label">شهادات</span>
+                </div>
+                <div class="stat-progress">
+                    <div class="progress-bar"><div class="progress" style="width:30%"></div></div>
                 </div>
             </div>
             <div class="stat-card">
@@ -61,112 +137,130 @@
                     <span class="stat-number">7</span>
                     <span class="stat-label">أيام متتالية</span>
                 </div>
+                <div class="stat-progress">
+                    <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Dashboard Grid -->
-        <div class="dashboard-grid">
-            <!-- Profile Card -->
+        <section class="dashboard-grid">
+            <!-- Recent Lessons -->
             <div class="dashboard-card">
-                <h3>📊 معلومات حسابك</h3>
-                <div class="profile-info" id="profileInfo">
-                    <p><strong>👤 اسم المستخدم:</strong> <span id="displayUsername">مستخدم</span></p>
-                    <p><strong>📧 البريد:</strong> <span id="displayEmail">user@example.com</span></p>
-                    <p><strong>📅 تاريخ التسجيل:</strong> <span id="displayDate">2026-01-15</span></p>
-                    <p><strong>📈 المستوى:</strong> <span id="displayLevel">متوسط</span></p>
+                <div class="card-header">
+                    <h3>📖 أحدث الدروس</h3>
+                    <a href="lessons.html" class="view-all">عرض الكل →</a>
                 </div>
-                <button class="btn-edit" onclick="editProfile()">✏️ تعديل الملف الشخصي</button>
-            </div>
-            
-            <!-- Progress Card -->
-            <div class="dashboard-card">
-                <h3>📈 تقدمك في التعلم</h3>
-                <div class="progress-container">
-                    <div class="progress-label">
-                        <span>الإنجاز الكلي</span>
-                        <span id="progressPercentage">60%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" id="progressBar" style="width: 60%;">60%</div>
-                    </div>
-                </div>
-                <div class="progress-details">
-                    <div class="progress-item">
-                        <span>📖 قراءة</span>
-                        <div class="mini-bar"><div style="width:80%"></div></div>
-                    </div>
-                    <div class="progress-item">
-                        <span>✍️ كتابة</span>
-                        <div class="mini-bar"><div style="width:55%"></div></div>
-                    </div>
-                    <div class="progress-item">
-                        <span>🎧 استماع</span>
-                        <div class="mini-bar"><div style="width:70%"></div></div>
-                    </div>
-                    <div class="progress-item">
-                        <span>🗣️ محادثة</span>
-                        <div class="mini-bar"><div style="width:45%"></div></div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Lessons Card -->
-            <div class="dashboard-card">
-                <h3>🎯 الدروس المتاحة</h3>
                 <ul class="lesson-list">
                     <li class="completed">
                         <span class="lesson-status">✅</span>
-                        <span class="lesson-title">الدرس 1: الحروف والأرقام</span>
+                        <span class="lesson-title">الحروف الإنجليزية</span>
+                        <span class="lesson-date">منذ يومين</span>
                     </li>
                     <li class="completed">
                         <span class="lesson-status">✅</span>
-                        <span class="lesson-title">الدرس 2: التحيات الأساسية</span>
+                        <span class="lesson-title">الأرقام والأعداد</span>
+                        <span class="lesson-date">منذ 3 أيام</span>
                     </li>
                     <li class="in-progress">
                         <span class="lesson-status">⏳</span>
-                        <span class="lesson-title">الدرس 3: الأزمنة (الحاضر)</span>
+                        <span class="lesson-title">الأزمنة (الحاضر)</span>
+                        <span class="lesson-date">جاري...</span>
                     </li>
                     <li class="pending">
                         <span class="lesson-status">📌</span>
-                        <span class="lesson-title">الدرس 4: الأزمنة (الماضي)</span>
-                    </li>
-                    <li class="pending">
-                        <span class="lesson-status">📌</span>
-                        <span class="lesson-title">الدرس 5: المحادثات اليومية</span>
+                        <span class="lesson-title">المحادثات اليومية</span>
+                        <span class="lesson-date">لم يبدأ</span>
                     </li>
                 </ul>
-                <a href="#" class="btn-view-all">عرض جميع الدروس →</a>
             </div>
-            
-            <!-- Achievements Card -->
+
+            <!-- Upcoming Quizzes -->
             <div class="dashboard-card">
-                <h3>🏆 إنجازاتك</h3>
+                <div class="card-header">
+                    <h3>🎯 الاختبارات القادمة</h3>
+                    <a href="quizzes.html" class="view-all">عرض الكل →</a>
+                </div>
+                <ul class="quiz-list">
+                    <li>
+                        <span class="quiz-icon">📝</span>
+                        <div class="quiz-info">
+                            <span class="quiz-title">اختبار المستوى المبتدئ</span>
+                            <span class="quiz-date">غداً - 10:00 ص</span>
+                        </div>
+                        <button class="btn-start-quiz-small">ابدأ</button>
+                    </li>
+                    <li>
+                        <span class="quiz-icon">📝</span>
+                        <div class="quiz-info">
+                            <span class="quiz-title">اختبار القواعد</span>
+                            <span class="quiz-date">بعد غد - 2:00 م</span>
+                        </div>
+                        <button class="btn-start-quiz-small">ابدأ</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Achievements -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>🏆 إنجازاتك</h3>
+                    <span class="badge-count">3/8</span>
+                </div>
                 <div class="achievements-grid">
-                    <div class="achievement">
+                    <div class="achievement unlocked">
                         <span class="achievement-icon">🌟</span>
-                        <span class="achievement-name">المبتدئ المتميز</span>
+                        <span class="achievement-name">المبتدئ</span>
                     </div>
-                    <div class="achievement">
+                    <div class="achievement unlocked">
                         <span class="achievement-icon">📚</span>
-                        <span class="achievement-name">قارئ نشيط</span>
+                        <span class="achievement-name">قارئ</span>
                     </div>
-                    <div class="achievement">
+                    <div class="achievement unlocked">
                         <span class="achievement-icon">🎯</span>
-                        <span class="achievement-name">متفوق في القواعد</span>
+                        <span class="achievement-name">متفوق</span>
                     </div>
                     <div class="achievement locked">
                         <span class="achievement-icon">🔒</span>
                         <span class="achievement-name">المحترف</span>
                     </div>
+                    <div class="achievement locked">
+                        <span class="achievement-icon">🔒</span>
+                        <span class="achievement-name">المعلم</span>
+                    </div>
+                    <div class="achievement locked">
+                        <span class="achievement-icon">🔒</span>
+                        <span class="achievement-name">الخبير</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2026 منصة تعلم الإنجليزية - جميع الحقوق محفوظة</p>
-    </footer>
+            <!-- Quick Actions -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>⚡ إجراءات سريعة</h3>
+                </div>
+                <div class="quick-actions">
+                    <a href="lessons.html" class="quick-action">
+                        <span class="action-icon">📖</span>
+                        <span>استكشف الدروس</span>
+                    </a>
+                    <a href="quizzes.html" class="quick-action">
+                        <span class="action-icon">🎯</span>
+                        <span>ابدأ اختبار</span>
+                    </a>
+                    <a href="#" class="quick-action" onclick="editProfile()">
+                        <span class="action-icon">✏️</span>
+                        <span>تعديل الملف</span>
+                    </a>
+                    <a href="index.html" class="quick-action">
+                        <span class="action-icon">🏠</span>
+                        <span>العودة للرئيسية</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
