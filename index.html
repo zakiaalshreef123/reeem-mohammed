@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة تعلم الإنجليزية</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav>
+            <div class="logo">📚 English Platform</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="#courses">الدورات</a></li>
+                <li><a href="#about">عن المنصة</a></li>
+                <li id="authLinks">
+                    <a href="login.html" class="btn-login">تسجيل دخول</a>
+                    <a href="register.html" class="btn-register">إنشاء حساب</a>
+                </li>
+                <li id="userLinks" style="display:none;">
+                    <a href="dashboard.html">لوحة التحكم</a>
+                    <a href="#" id="logoutBtn" class="btn-logout">تسجيل خروج</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>🌟 تعلم الإنجليزية بسهولة</h1>
+            <p>منصتك المثالية لتعلم اللغة الإنجليزية من الصفر حتى الاحتراف</p>
+            <a href="register.html" class="btn-start">ابدأ التعلم الآن</a>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <h2>📖 دوراتنا</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h3>🔤 المستوى المبتدئ</h3>
+                    <p>تعلم الأساسيات من حروف وأرقام وجمل بسيطة</p>
+                    <span class="course-level">⭐ Beginner</span>
+                </div>
+                <div class="course-card">
+                    <h3>📝 المستوى المتوسط</h3>
+                    <p>قواعد اللغة والمحادثات اليومية</p>
+                    <span class="course-level">⭐⭐ Intermediate</span>
+                </div>
+                <div class="course-card">
+                    <h3>🎯 المستوى المتقدم</h3>
+                    <p>محادثات متقدمة وكتابة احترافية</p>
+                    <span class="course-level">⭐⭐⭐ Advanced</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>عن المنصة</h2>
+            <p>نقدم لك تجربة تعلم فريدة مع دروس تفاعلية واختبارات تقيم مستواك</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">طالب مسجل</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">درس تفاعلي</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">مدرس محترف</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 منصة تعلم الإنجليزية - جميع الحقوق محفوظة</p>
+        <div class="footer-links">
+            <a href="#">سياسة الخصوصية</a>
+            <a href="#">الشروط والأحكام</a>
+            <a href="#">اتصل بنا</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
