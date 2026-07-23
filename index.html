@@ -12,20 +12,33 @@
     <header>
         <nav>
             <div class="logo">📚 English Platform</div>
+            
+            <!-- القائمة الرئيسية -->
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="#courses">الدورات</a></li>
-                <li><a href="#about">عن المنصة</a></li>
+                <li><a href="index.html" class="active">🏠 الرئيسية</a></li>
+                <li><a href="lessons.html">📖 الدروس</a></li>
+                <li><a href="quizzes.html">🎯 الاختبارات</a></li>
+                <li><a href="dashboard.html">📊 لوحة التحكم</a></li>
+                <li><a href="#about">ℹ️ عن المنصة</a></li>
+                <li><a href="#contact">📞 اتصل بنا</a></li>
+                
+                <!-- روابط تسجيل الدخول / المستخدم -->
                 <li id="authLinks">
-                    <a href="login.html" class="btn-login">تسجيل دخول</a>
-                    <a href="register.html" class="btn-register">إنشاء حساب</a>
+                    <a href="login.html" class="btn-login">🔐 تسجيل دخول</a>
+                    <a href="register.html" class="btn-register">📝 إنشاء حساب</a>
                 </li>
                 <li id="userLinks" style="display:none;">
-                    <a href="dashboard.html">لوحة التحكم</a>
-                    <a href="#" id="logoutBtn" class="btn-logout">تسجيل خروج</a>
+                    <span class="user-name" id="userNameDisplay">👤 مستخدم</span>
+                    <a href="#" id="logoutBtn" class="btn-logout">🚪 تسجيل خروج</a>
                 </li>
             </ul>
-            <div class="hamburger" id="hamburger">☰</div>
+            
+            <!-- زر الهامبرغر للجوال -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -35,7 +48,35 @@
         <section class="hero">
             <h1>🌟 تعلم الإنجليزية بسهولة</h1>
             <p>منصتك المثالية لتعلم اللغة الإنجليزية من الصفر حتى الاحتراف</p>
-            <a href="register.html" class="btn-start">ابدأ التعلم الآن</a>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn-start">🚀 ابدأ التعلم الآن</a>
+                <a href="lessons.html" class="btn-secondary-hero">📖 استكشف الدروس</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>✨ مميزات المنصة</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📚</span>
+                    <h3>دروس تفاعلية</h3>
+                    <p>تعلم من خلال دروس فيديو تفاعلية وتمارين عملية</p>
+                    <a href="lessons.html" class="feature-link">استكشف الدروس →</a>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3>اختبارات تقييم</h3>
+                    <p>اختبر مستواك من خلال اختبارات متنوعة ومتعددة المستويات</p>
+                    <a href="quizzes.html" class="feature-link">جرب الاختبارات →</a>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>تتبع التقدم</h3>
+                    <p>تابع تقدمك في التعلم واحصل على إنجازاتك</p>
+                    <a href="dashboard.html" class="feature-link">عرض لوحة التحكم →</a>
+                </div>
+            </div>
         </section>
 
         <!-- Courses Section -->
@@ -43,26 +84,32 @@
             <h2>📖 دوراتنا</h2>
             <div class="course-grid">
                 <div class="course-card">
-                    <h3>🔤 المستوى المبتدئ</h3>
+                    <div class="course-icon">🔤</div>
+                    <h3>المستوى المبتدئ</h3>
                     <p>تعلم الأساسيات من حروف وأرقام وجمل بسيطة</p>
                     <span class="course-level">⭐ Beginner</span>
+                    <a href="lessons.html?level=beginner" class="course-link">ابدأ الآن →</a>
                 </div>
                 <div class="course-card">
-                    <h3>📝 المستوى المتوسط</h3>
+                    <div class="course-icon">📝</div>
+                    <h3>المستوى المتوسط</h3>
                     <p>قواعد اللغة والمحادثات اليومية</p>
                     <span class="course-level">⭐⭐ Intermediate</span>
+                    <a href="lessons.html?level=intermediate" class="course-link">ابدأ الآن →</a>
                 </div>
                 <div class="course-card">
-                    <h3>🎯 المستوى المتقدم</h3>
+                    <div class="course-icon">🎯</div>
+                    <h3>المستوى المتقدم</h3>
                     <p>محادثات متقدمة وكتابة احترافية</p>
                     <span class="course-level">⭐⭐⭐ Advanced</span>
+                    <a href="lessons.html?level=advanced" class="course-link">ابدأ الآن →</a>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="about">
-            <h2>عن المنصة</h2>
+            <h2>ℹ️ عن المنصة</h2>
             <p>نقدم لك تجربة تعلم فريدة مع دروس تفاعلية واختبارات تقيم مستواك</p>
             <div class="about-stats">
                 <div class="stat">
@@ -77,17 +124,78 @@
                     <span class="stat-number">30+</span>
                     <span class="stat-label">مدرس محترف</span>
                 </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">اختبار تقييم</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>📞 اتصل بنا</h2>
+            <p>لديك سؤال أو استفسار؟ تواصل معنا</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>info@english-platform.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+966 50 000 0000</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>الرياض، المملكة العربية السعودية</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="اسمك" required>
+                    <input type="email" placeholder="بريدك الإلكتروني" required>
+                    <textarea placeholder="رسالتك" rows="4" required></textarea>
+                    <button type="submit" class="btn-submit">📨 إرسال الرسالة</button>
+                </form>
             </div>
         </section>
     </main>
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <p>© 2026 منصة تعلم الإنجليزية - جميع الحقوق محفوظة</p>
-        <div class="footer-links">
-            <a href="#">سياسة الخصوصية</a>
-            <a href="#">الشروط والأحكام</a>
-            <a href="#">اتصل بنا</a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>📚 English Platform</h4>
+                <p>منصتك المثالية لتعلم اللغة الإنجليزية</p>
+            </div>
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="lessons.html">الدروس</a></li>
+                    <li><a href="quizzes.html">الاختبارات</a></li>
+                    <li><a href="dashboard.html">لوحة التحكم</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>تواصل معنا</h4>
+                <ul>
+                    <li><a href="#">📧 البريد الإلكتروني</a></li>
+                    <li><a href="#">📱 واتساب</a></li>
+                    <li><a href="#">📸 إنستغرام</a></li>
+                    <li><a href="#">🐦 تويتر</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>الدعم</h4>
+                <ul>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 منصة تعلم الإنجليزية - جميع الحقوق محفوظة</p>
         </div>
     </footer>
 
